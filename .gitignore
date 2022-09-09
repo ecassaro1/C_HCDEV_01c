@@ -1,6 +1,7 @@
 node_modules
 node_modules/*
 .node_modules/
+.cf5_mta_build_tmp/
 
 *.mtar
 
