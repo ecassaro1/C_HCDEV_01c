@@ -1,0 +1,16 @@
+{
+    "init_data": {
+        "subaccount": {
+            "existing_destinations_policy": "update",
+            "destinations": [
+                {
+                    "Name": "cf5beDestination",
+                    "Authentication": "NoAuthentication",
+                    "ProxyType": "Internet",
+                    "Type": "HTTP",
+                    "URL": "https://ae797c74trial-dev-cf5be.cfapps.us10.hana.ondemand.com"
+                }
+            ]
+        }
+    }
+}
