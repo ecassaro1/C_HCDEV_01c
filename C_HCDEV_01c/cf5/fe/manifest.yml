@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf5fe
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+  - cf5feXSUAA
+  - cf5beDestination

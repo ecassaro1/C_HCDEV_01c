@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function getFromBE() {
+            debugger;
+
+            fetch("/backend")
+            .then(response => {
+                //debugger;
+                return response.json();
+            })
+            .then(data => {
+                debugger;
+                alert("the backend returns..."+data.message);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello World Frontend (cf4fe)!!!</h1>
+    <button onclick="getFromBE()">
+        getFromBE
+    </button>
+</body>
+
+</html>

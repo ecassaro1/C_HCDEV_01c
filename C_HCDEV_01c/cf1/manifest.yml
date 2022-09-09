@@ -1,0 +1,5 @@
+---
+applications:
+- name: c-hdev-01b-cf1-ae797c74trial
+  buildpacks:
+    - nodejs_buildpack

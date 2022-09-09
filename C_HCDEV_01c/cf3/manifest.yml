@@ -1,0 +1,7 @@
+---
+applications:
+- name: c-hdev-01b-cf3-ae797c74trial
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+  - cf3-xsuaa
+  - cf1Destination
