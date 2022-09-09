@@ -1,9 +1,0 @@
-{
-    "xsappname": "cf5feXSUAA",
-    "tenant-mode": "dedicated",
-    "description": "Security for cf5fe",
-    "scopes": [
-    ],
-    "role-templates": [
-    ]
-  }

@@ -1,5 +1,0 @@
----
-applications:
-- name: cf4be
-  buildpacks:
-    - nodejs_buildpack
