@@ -2,8 +2,13 @@ _schema-version: "3.1"
 ID: cf5
 description: A fullstack project
 version: 1.0.0
-
 modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: cf5_hdi_db
+
 - name: cf5be
   type: nodejs
   path: be
@@ -15,30 +20,38 @@ modules:
     buildpack: nodejs_buildpack
   build-parameters:
     builder: npm-ci
+  requires:
+  - name: cf5_hdi_db
 
 - name: cf5fe
   type: nodejs
   path: fe
+  requires:
+  - name: cf5beDestination
+  - name: cf5feXSUAA
   parameters:
     buildpack: nodejs_buildpack
     disk-quota: 256M
     memory: 256M
-  requires:
-    - name: cf5beDestination
-    - name: cf5feXSUAA
 
 resources:
+- name: cf5_hdi_db
+  type: com.sap.xs.hdi-container
+  properties:
+    hdi-container-name: ${service-name}
+
 - name: cf5beDestination
   type: org.cloudfoundry.managed-service
   parameters:
-    service-plan: lite
-    service: destination
     path: destinations.json
+    service: destination
+    service-plan: lite
 
 - name: cf5feXSUAA
   type: org.cloudfoundry.managed-service
   parameters:
     path: ./fe/xs-security.json
     service: xsuaa
-    service-plan: application
     service-name: cf5feXSUAA
+    service-plan: application
+

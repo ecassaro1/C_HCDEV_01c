@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/ecassaro1/C_HCDEV_01b#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "@sap/hana-client": "^2.13.22",
+    "@sap/hdi": "^3.0.2",
+    "@sap/xsenv": "^3.3.2",
+    "async-waterfall": "^0.1.5",
+    "express": "^4.18.1",
+    "util": "^0.12.4"
   }
 }
