@@ -1,0 +1,65 @@
+_schema-version: "3.1"
+ID: cf6
+description: A simple CAP project.
+version: 1.0.0
+modules:
+- name: cf6-srv
+  type: nodejs
+  path: gen/srv
+  requires:
+  - name: cf6-db
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+  build-parameters:
+    builder: npm-ci
+- name: cf6-db-deployer
+  type: hdb
+  path: gen/db
+  requires:
+  - name: cf6-db
+  parameters:
+    buildpack: nodejs_buildpack
+
+- name: cf6-elem1
+  type: html5
+  path: ./app/cf6-elem1/
+  properties:
+    CORS:
+      - uriPattern: .
+        allowedMethods:
+          - GET
+          - POST
+        allowedOrigin:
+          - host: '*.ondemand.com'
+  build-parameters:
+    builder: custom
+    commands:
+      - npm install
+      - ui5 build --dest ../fe1/webapp
+    supported-platforms: []
+- name: cf6-fe1
+  type: approuter.nodejs
+  path: app/fe1
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+  requires:
+    - name: html5-destination-cf6
+
+resources:
+- name: cf6-db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+
+- name: html5-destination-cf6
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service-plan: lite
+    service: destination
+    path: ./app/fe1/destinations.json
