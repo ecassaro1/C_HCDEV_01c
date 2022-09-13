@@ -49,6 +49,7 @@ modules:
     memory: 256M
   requires:
     - name: html5-destination-cf6
+    - name: cf6feXSUAA
 
 resources:
 - name: cf6-db
@@ -63,3 +64,11 @@ resources:
     service-plan: lite
     service: destination
     path: ./app/fe1/destinations.json
+
+- name: cf6feXSUAA
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./app/fe1/xs-security.json
+    service: xsuaa
+    service-name: cf6feXSUAA
+    service-plan: application

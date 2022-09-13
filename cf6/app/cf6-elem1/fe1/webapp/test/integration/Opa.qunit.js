@@ -1,1 +1,0 @@
-sap.ui.require(["sap/fe/test/JourneyRunner","cf6elem1/test/integration/pages/MainListReport","cf6elem1/test/integration/pages/MainObjectPage","cf6elem1/test/integration/OpaJourney"],function(e,t,n,a){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("cf6elem1")+"/index.html"});e.run({pages:{onTheMainPage:t,onTheDetailPage:n}},a.run)});

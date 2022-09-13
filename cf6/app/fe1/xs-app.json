@@ -12,7 +12,7 @@
         {
             "source": "^(.*)$",
             "target": "$1",
-            "authenticationType": "none",
+            "authenticationType": "xsuaa",
             "localDir": "webapp/"
         }
     ]
