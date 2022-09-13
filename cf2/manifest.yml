@@ -1,6 +1,6 @@
 ---
 applications:
-- name: c-hdev-01b-cf2-ae797c74trial
+- name: cf2-approuter
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   services:
   - cf2-xsuaa
