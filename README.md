@@ -26,3 +26,4 @@ cf5: cópia do cf4 add db module
 
 cf6: versão Nutela, usando CAP e Fiori Elements
     
+cf7: cópia do cf3 mas acessando backend na AWS

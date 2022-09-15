@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function getBooksFromBE() {
+            debugger;
+
+            fetch("/backend/")
+                .then(response => {
+                    //debugger;
+                    return response.json();
+                })
+                .then(data => {
+                    debugger;
+                    //build some table
+
+                    var table = document.createElement("table"), row, cellA, cellB;
+                    document.getElementById("BooksArea").appendChild(table);
+
+                    for (var i = 0; i < data.length; i++) {
+                        let book = data[i];
+
+                        row = table.insertRow();
+                        cellA = row.insertCell();
+                        cellB = row.insertCell();
+
+                        cellA.innerHTML = book.isbn;
+                        cellB.innerHTML = book.title;
+                    } //row
+                }
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello World Frontend (cf7fe)!!!</h1>
+    <br>
+    <button onclick="getBooksFromBE()">
+        getBooksFromBE (AWS)
+    </button>
+    <br>
+
+    <div id="BooksArea"></div>
+</body>
+
+</html>

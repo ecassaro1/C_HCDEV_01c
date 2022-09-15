@@ -1,0 +1,16 @@
+{
+    "init_data": {
+        "instance": {
+            "existing_destinations_policy": "update",
+            "destinations": [
+		{
+                    "Name": "aws-books",
+                    "Authentication": "NoAuthentication",
+                    "ProxyType": "Internet",
+                    "Type": "HTTP",
+                    "URL": "https://46nyg947v6.execute-api.us-east-1.amazonaws.com/test/book"
+              }
+            ]
+        }
+    }
+}

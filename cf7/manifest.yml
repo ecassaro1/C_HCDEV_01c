@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf7-approuter
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+  - cf7-xsuaa
+  - aws-books
