@@ -1,0 +1,18 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/backend(.*)",
+            "target": "$1",
+            "destination": "abap-cloud-dest-lite3",
+            "authenticationType": "xsuaa"
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "authenticationType": "xsuaa",
+            "localDir": "./"
+        }
+    ]
+}

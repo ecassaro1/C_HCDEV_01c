@@ -27,3 +27,6 @@ cf5: cópia do cf4 add db module
 cf6: versão Nutela, usando CAP e Fiori Elements
     
 cf7: cópia do cf3 mas acessando backend na AWS
+
+cf8: cópia do cf7 mas acessando backend ABAP Environment
+    precisa corrigir o dest-config.json

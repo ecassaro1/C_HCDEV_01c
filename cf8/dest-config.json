@@ -1,0 +1,58 @@
+{
+    "init_data": {
+        "instance": {
+            "existing_destinations_policy": "update",
+            "destinations": [
+		{
+                    "Name": "abap-cloud-dest-lite3",
+                    "Type": "HTTP",
+                    "URL": "https://6654aaf7-905f-48ea-b013-3811c03fcba8.abap.us10.hana.ondemand.com",
+                    "Authentication": "OAuth2UserTokenExchange",
+                    "ProxyType": "Internet",
+                    "ClientID": "sb-cf7-xsuaa!t92186",
+                    "ClientSecret": "cLzaJM4ao3D8J1Bp5LORcvfL0TM=",
+                    "TokenServiceURLType": "Dedicated",
+                    "TokenServiceURL": "https://ae797c74trial.authentication.us10.hana.ondemand.com/oauth/token"
+              }
+            ]
+        }
+    }
+}
+
+configuração manual (a de cima não está subindo direito. Precisa saber os nomes dos parâmetros)
+Name:
+abap-cloud-dest-lite3
+Type:
+HTTP
+Description:
+URL:
+https://6654aaf7-905f-48ea-b013-3811c03fcba8.abap.us10.hana.ondemand.com
+Proxy Type:
+Internet
+Authentication:
+OAuth2UserTokenExchange
+Use mTLS for token retrieval
+Client ID:
+sb-cf7-xsuaa!t92186
+Client Secret:
+••••••••
+Token Service URL Type:
+Dedicated
+Common
+Token Service URL:
+https://ae797c74trial.authentication.us10.hana.ondemand.com/oauth/token
+Additional Properties
+
+ClientID
+sb-cf7-xsuaa!t92186
+
+ClientSecret
+cLzaJM4ao3D8J1Bp5LORcvfL0TM=
+
+TokenServiceURL
+https://ae797c74trial.authentication.us10.hana.ondemand.com/oauth/token
+
+TokenServiceURLType
+Dedicated
+
+Use default JDK truststore
