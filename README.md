@@ -21,6 +21,8 @@ cf3: front igual ao do cf2 acessando o backend do cf1
         cf create-service destination lite cf1Destination -c dest-config.json
 
 cf4: back e front num MTA, com destination e xsuaa
+    mbt build
+    deploy no .MTAR
 
 cf5: cópia do cf4 add db module
 
@@ -30,3 +32,5 @@ cf7: cópia do cf3 mas acessando backend na AWS
 
 cf8: cópia do cf7 mas acessando backend ABAP Environment
     precisa corrigir o dest-config.json
+    está usando o xsuaa do cf7
+

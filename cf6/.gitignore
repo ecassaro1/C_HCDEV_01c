@@ -28,3 +28,6 @@ mta_archives/
 # IDEs
 # .vscode
 # .idea
+
+# auto generated wildcard
+C_HCDEV_01c/cf5/be/.env

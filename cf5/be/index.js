@@ -40,7 +40,13 @@ const getEnt1 = async ()=>{
 
     connection.connect(connOptions);
 
-    var sql = 'SELECT * FROM "025636FFD39143B4A610D9EF32B2BAF0"."ENT1"';
+    var sql = 
+        'SELECT * FROM '
+        + '"' 
+        + credentials.schema
+        + '"'
+        + '."ENT1"';
+    console.log(sql);
 
     var rows = await connection.exec(sql);
 
