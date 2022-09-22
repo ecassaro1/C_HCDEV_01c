@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf5be
+  buildpacks:
+    - nodejs_buildpack
+  services:
+    - cf5_hdi_db
