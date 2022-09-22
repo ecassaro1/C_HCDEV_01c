@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify({ message: "Hello World Backend (cf5be)!!!" }));
+  res.end(JSON.stringify({ message: "Hello World Backend (cf9be)!!!" }));
 })
 
 app.get('/Ent1', async function (req, res) {
@@ -26,7 +26,7 @@ const getEnt1 = async ()=>{
 
     let vcap_services = await getEnv();
 
-    let credentials = vcap_services['cf5_hdi_db'].credentials;
+    let credentials = vcap_services['cf9_hdi_db'].credentials;
 
     var connOptions = {
         serverNode: credentials.host+":"+credentials.port,

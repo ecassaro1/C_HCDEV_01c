@@ -1,7 +1,7 @@
 {
-  "name": "cf5be",
+  "name": "cf9be",
   "version": "1.0.0",
-  "description": "Hello World no CF",
+  "description": "AWS EC2 express acessando tabela no HANA do BTP/CF",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
