@@ -34,3 +34,4 @@ cf8: cópia do cf7 mas acessando backend ABAP Environment
     precisa corrigir o dest-config.json
     está usando o xsuaa do cf7
 
+cf9: db e be. Node acessando o HANA. Roda localmente. Consegui rodar num EC2 da AWS.
