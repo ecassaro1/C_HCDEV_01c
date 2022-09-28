@@ -31,3 +31,5 @@ mta_archives/
 
 # auto generated wildcard
 C_HCDEV_01c/cf5/be/.env
+# auto generated wildcard
+cf6/.env
