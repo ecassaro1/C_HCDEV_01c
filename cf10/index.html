@@ -10,7 +10,7 @@
             fetch("/backend/sap/opu/odata/sap/userdefaults/I_Userdetails('BPINST')?$format=json")
             .then(response => {
                 debugger;
-                return response.json();
+                return response;
             })
             .then(data => {
                 debugger;

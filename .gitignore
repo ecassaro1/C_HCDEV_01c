@@ -109,3 +109,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# auto generated wildcard
+cf10/.env

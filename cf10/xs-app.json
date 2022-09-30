@@ -6,7 +6,7 @@
             "source": "^/backend(.*)",
             "target": "$1",
             "destination": "demo21dest",
-            "authenticationType": "BasicAuthentication"
+            "authenticationType": "none"
         },
         {
             "source": "^(.*)$",

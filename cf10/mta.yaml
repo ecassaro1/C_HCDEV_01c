@@ -20,3 +20,9 @@ resources:
   parameters:
     service-plan: lite
     service: destination
+
+- name: connectivity1
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service-plan: lite
+    service: connectivity
