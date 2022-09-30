@@ -13,6 +13,7 @@ modules:
     memory: 256M
   requires:
     - name: demo21dest
+    - name: connectivity1
 
 resources:
 - name: demo21dest
