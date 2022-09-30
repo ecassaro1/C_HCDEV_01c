@@ -35,3 +35,9 @@ cf8: cópia do cf7 mas acessando backend ABAP Environment
     está usando o xsuaa do cf7
 
 cf9: db e be. Node acessando o HANA. Roda localmente. Consegui rodar num EC2 da AWS.
+
+cf10: acessar o /sap/opu/odata/sap/userdefaults/I_Userdetails?$format=json&$top=1 no Demo21 via destination e app-router
+    /sap/opu/odata/sap/userdefaults/I_Userdetails?$format=json&$top=1
+    /sap/opu/odata/sap/userdefaults/I_Userdetails('BPINST')?$format=json
+
+    https://blogs.sap.com/2018/11/12/how-to-setup-cloud-connection/

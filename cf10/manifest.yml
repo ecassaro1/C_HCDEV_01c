@@ -1,0 +1,6 @@
+---
+applications:
+- name: cf10-approuter
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+    - demo21dest-inst
