@@ -11,4 +11,5 @@ Para fazer o deploy no CF:
 
     qdo terminar de subir:
         colocar as suas credencias na destination cf10-dest-1 (dentro do space)
+        teste a destination
         chamar o link do app-router cf10approuter (em applications)

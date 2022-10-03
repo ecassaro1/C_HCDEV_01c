@@ -7,7 +7,16 @@
         function getFromBE() {
             debugger;
 
-            fetch("/backend/sap/opu/odata/sap/userdefaults/I_Userdetails('BPINST')?$format=json")
+            let userid = document.getElementById('UserID').value;
+
+            let url = 
+                "/backend/sap/opu/odata/sap/userdefaults/I_Userdetails('"
+                +
+                userid
+                +
+                "')?$format=json";
+
+            fetch(url)
             .then(response => {
                 debugger;
                 return response.json();
@@ -16,15 +25,7 @@
                 debugger;
                 //alert("the backend returns..."+data.message);
 
-
-                var para1 = document.createElement("p");
-                const node1 = document.createTextNode("UserID:"+data.d.UserID);
-                para1.appendChild(node1);
-                document.getElementById("UserDetailsArea").appendChild(para1);
-                var para2 = document.createElement("p");
-                const node2 = document.createTextNode("FullName:"+data.d.FullName);
-                para2.appendChild(node2);
-                document.getElementById("UserDetailsArea").appendChild(para2);
+                document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
             })
         }
     </script>
@@ -34,11 +35,15 @@
     <h1>Approuter conectando com o Demo 21</h1>
     <p>A conexão passa por uma destination (instance), por um connectivity service, e pelo Cloud Connector</p> 
 
+    <label for="UserID">Informe o UserID</label>
+    <p>(por exemplo, S4H_HCM_MGR)</p>
+    <input id="UserID" name="UserID" type="text" >
+
     <button onclick="getFromBE()">
         getFromBE (cf10-dest-1)
     </button>
 
-    <div id="UserDetailsArea"></div>
+    <pre id="json"></pre>
 </body>
 
 </html>
