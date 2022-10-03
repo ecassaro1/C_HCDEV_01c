@@ -10,22 +10,35 @@
             fetch("/backend/sap/opu/odata/sap/userdefaults/I_Userdetails('BPINST')?$format=json")
             .then(response => {
                 debugger;
-                return response;
+                return response.json();
             })
             .then(data => {
                 debugger;
                 //alert("the backend returns..."+data.message);
+
+
+                var para1 = document.createElement("p");
+                const node1 = document.createTextNode("UserID:"+data.d.UserID);
+                para1.appendChild(node1);
+                document.getElementById("UserDetailsArea").appendChild(para1);
+                var para2 = document.createElement("p");
+                const node2 = document.createTextNode("FullName:"+data.d.FullName);
+                para2.appendChild(node2);
+                document.getElementById("UserDetailsArea").appendChild(para2);
             })
         }
     </script>
 </head>
 
 <body>
-    <h1>Hello World Frontend!!!</h1>
+    <h1>Approuter conectando com o Demo 21</h1>
+    <p>A conexão passa por uma destination (instance), por um connectivity service, e pelo Cloud Connector</p> 
 
     <button onclick="getFromBE()">
-        getFromBE (demo21dest-inst)
+        getFromBE (cf10-dest-1)
     </button>
+
+    <div id="UserDetailsArea"></div>
 </body>
 
 </html>

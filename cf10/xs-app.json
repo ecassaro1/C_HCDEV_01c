@@ -5,7 +5,7 @@
         {
             "source": "^/backend(.*)",
             "target": "$1",
-            "destination": "demo21dest",
+            "destination": "cf10-dest-1",
             "authenticationType": "none"
         },
         {
