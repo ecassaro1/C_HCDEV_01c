@@ -112,3 +112,7 @@ dist
 
 # auto generated wildcard
 cf10/.env
+# auto generated wildcard
+cf11/.env
+# auto generated wildcard
+.env

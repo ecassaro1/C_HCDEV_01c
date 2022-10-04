@@ -1,0 +1,67 @@
+{
+    "VCAP_SERVICES": {
+        "destination": [
+            {
+                "name": "cf11-dest",
+                "instance_name": "cf11-dest",
+                "label": "destination",
+                "tags": [
+                    "destination",
+                    "conn",
+                    "connsvc",
+                    "endpoint:https://api.cf.us10.hana.ondemand.com",
+                    "org:ae797c74trial",
+                    "space:dev"
+                ],
+                "plan": "lite",
+                "credentials": {
+                    "clientid": "sb-clone7f340e294fea44f8a598b2aa9b306c03!b92186|destination-xsappname!b62",
+                    "clientsecret": "6b76c83b-132c-4a97-9abb-7c3d0f0b033d$WmzaY-qOZLtO8WIA_PZc_kZaeWZxTEsDTowHuxhzV6o=",
+                    "credential-type": "binding-secret",
+                    "identityzone": "ae797c74trial",
+                    "instanceid": "7f340e29-4fea-44f8-a598-b2aa9b306c03",
+                    "service_key_name": "key",
+                    "tenantid": "38c725c0-9136-482c-b958-ecef97962e9a",
+                    "tenantmode": "dedicated",
+                    "uaadomain": "authentication.us10.hana.ondemand.com",
+                    "uri": "https://destination-configuration.cfapps.us10.hana.ondemand.com",
+                    "url": "https://ae797c74trial.authentication.us10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqyn8MVsvswYdcLBxlLDD\nAe0idQjT7AQ+ovOlULehXbLV2kcXE49wLQxRMrO5pRcVRkkme0pOHUunYt34iV9h\nTe/M00/8pu4GAvcR/Zu7fcJkIsJkxg5ifGM5nhPhyYARn+84w+wXyYqSeIWqn0kJ\n+rITVj/lrCP4MwwdvPSIt7EX30J4nt0FQ9ClWkLsi+DhzajX2ycrVTaLLW+gVCPu\nK0Wh7mXmxvxwzh2W3M+YqOaz6emMbCvgimFmeqXUnLKIZjG7OzLf64NZDaeGPXYr\nZe8uA020/khPsIxh53cd4q6YR1+1f//SwsM2UA3r1X9bX/jNFoB/OuGjgGRaJPX+\nOQIDAQAB\n-----END PUBLIC KEY-----",
+                    "xsappname": "clone7f340e294fea44f8a598b2aa9b306c03!b92186|destination-xsappname!b62"
+                }
+            }
+        ],
+        "xsuaa": [
+            {
+                "name": "cf11-auth",
+                "instance_name": "cf11-auth",
+                "label": "xsuaa",
+                "tags": [
+                    "xsuaa",
+                    "endpoint:https://api.cf.us10.hana.ondemand.com",
+                    "org:ae797c74trial",
+                    "space:dev"
+                ],
+                "plan": "application",
+                "credentials": {
+                    "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+                    "clientid": "sb-na-5ae54fdf-5c73-4473-80b2-93022e532489!t92186",
+                    "clientsecret": "Oaj6ysGdGePVvXPM344J0KZKWHk=",
+                    "credential-type": "instance-secret",
+                    "identityzone": "ae797c74trial",
+                    "identityzoneid": "38c725c0-9136-482c-b958-ecef97962e9a",
+                    "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+                    "service_key_name": "key",
+                    "subaccountid": "38c725c0-9136-482c-b958-ecef97962e9a",
+                    "tenantid": "38c725c0-9136-482c-b958-ecef97962e9a",
+                    "tenantmode": "shared",
+                    "uaadomain": "authentication.us10.hana.ondemand.com",
+                    "url": "https://ae797c74trial.authentication.us10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqyn8MVsvswYdcLBxlLDD\nAe0idQjT7AQ+ovOlULehXbLV2kcXE49wLQxRMrO5pRcVRkkme0pOHUunYt34iV9h\nTe/M00/8pu4GAvcR/Zu7fcJkIsJkxg5ifGM5nhPhyYARn+84w+wXyYqSeIWqn0kJ\n+rITVj/lrCP4MwwdvPSIt7EX30J4nt0FQ9ClWkLsi+DhzajX2ycrVTaLLW+gVCPu\nK0Wh7mXmxvxwzh2W3M+YqOaz6emMbCvgimFmeqXUnLKIZjG7OzLf64NZDaeGPXYr\nZe8uA020/khPsIxh53cd4q6YR1+1f//SwsM2UA3r1X9bX/jNFoB/OuGjgGRaJPX+\nOQIDAQAB\n-----END PUBLIC KEY-----",
+                    "xsappname": "na-5ae54fdf-5c73-4473-80b2-93022e532489!t92186",
+                    "zoneid": "38c725c0-9136-482c-b958-ecef97962e9a"
+                }
+            }
+        ]
+    }
+}

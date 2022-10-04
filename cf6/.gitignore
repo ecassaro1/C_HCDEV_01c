@@ -35,3 +35,7 @@ C_HCDEV_01c/cf5/be/.env
 cf6/.env
 # auto generated wildcard
 cf10/.env
+# auto generated wildcard
+cf11/.env
+# auto generated wildcard
+.env

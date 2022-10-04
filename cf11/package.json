@@ -1,0 +1,16 @@
+{
+  "name": "cf11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dest-test.js",
+  "scripts": {
+    "start": "node dest-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/xsenv": "^3.3.2",
+    "express": "^4.18.1",
+    "request": "^2.88.2"
+  }
+}

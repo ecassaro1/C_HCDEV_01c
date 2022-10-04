@@ -25,6 +25,7 @@ cf4: back e front num MTA, com destination e xsuaa
     deploy no .MTAR
 
 cf5: cópia do cf4 add db module
+    fe: https://ae797c74trial-dev-cf5fe.cfapps.us10.hana.ondemand.com/index.html
 
 cf6: versão Nutela, usando CAP e Fiori Elements
     
@@ -41,3 +42,9 @@ cf10: acessar o /sap/opu/odata/sap/userdefaults/I_Userdetails?$format=json&$top=
     /sap/opu/odata/sap/userdefaults/I_Userdetails('BPINST')?$format=json
 
     https://blogs.sap.com/2018/11/12/how-to-setup-cloud-connection/
+
+cf11: acessando o backend cf1 via nodejs
+    baseado no blog https://blogs.sap.com/2018/10/08/using-the-destination-service-in-the-cloud-foundry-environment/
+
+    o resultado sai no console (do express)
+    funcionando local. Precisa bindar um XSUAA genérico e o destination cf11-dest (arquivo para upload)
