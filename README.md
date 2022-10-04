@@ -28,12 +28,12 @@ cf5: cópia do cf4 add db module
     fe: https://ae797c74trial-dev-cf5fe.cfapps.us10.hana.ondemand.com/index.html
 
 cf6: versão Nutela, usando CAP e Fiori Elements
+    fe: https://ae797c74trial-dev-cf6-fe1.cfapps.us10.hana.ondemand.com/index.html
     
 cf7: cópia do cf3 mas acessando backend na AWS
 
 cf8: cópia do cf7 mas acessando backend ABAP Environment
-    precisa corrigir o dest-config.json
-    está usando o xsuaa do cf7
+    instruções no diretório
 
 cf9: db e be. Node acessando o HANA. Roda localmente. Consegui rodar num EC2 da AWS.
 

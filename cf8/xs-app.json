@@ -5,7 +5,7 @@
         {
             "source": "^/backend(.*)",
             "target": "$1",
-            "destination": "abap-cloud-dest-lite3",
+            "destination": "cf8-dest",
             "authenticationType": "xsuaa"
         },
         {

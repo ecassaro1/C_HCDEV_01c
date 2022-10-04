@@ -1,5 +1,5 @@
 {
-    "name": "my-approuter-cf3",
+    "name": "my-approuter-cf8",
     "scripts": {
       "start": "node node_modules/@sap/approuter/approuter.js"
     },

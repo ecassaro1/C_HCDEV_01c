@@ -3,5 +3,5 @@ applications:
 - name: cf8-approuter
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   services:
-  - cf7-xsuaa
-  - abap-cloud-dest-lite3
+  - cf8-xsuaa
+  - cf8-dest
