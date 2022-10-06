@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "cds run",
-    "watch-books-list-report": "cds watch --open books-list-report/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-books-list-report": "cds watch --open books-list-report/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-books-worklist": "cds watch --open books-worklist/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "engines": {
     "node": "^16.15"
@@ -62,6 +63,7 @@
     }
   },
   "sapux": [
-    "app/books-list-report"
+    "app/books-list-report",
+    "app/books-worklist"
   ]
 }

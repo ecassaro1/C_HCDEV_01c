@@ -63,6 +63,9 @@ cf12: fullstack padrão golden path
     mbt build
     deploy
 
-cf13: fullstack golden path com dois apps e authentication
-    Dois apps na pasta app. O 1o é só um hello.html. O 2o é um fiori elements list-report.
+cf13: fullstack golden path com três apps e authentication
+    Dois apps na pasta app. O 1o é só um hello.html. O 2o é um fiori elements list-report. O 3o é um worklist.
     O welcome file tem um link pra cada app.
+    (por alguma razão os apps só funcionam depois do 2o deploy)
+
+    no cat-service tem umas funcionalidades extra

@@ -69,6 +69,24 @@ modules:
         - ui5 build --dest ../app2
       supported-platforms: []
 
+  - name: cf13-app3
+    type: html5
+    path: app/books-worklist/
+    properties:
+      CORS:
+        - uriPattern: .
+          allowedMethods:
+            - GET
+            - POST
+          allowedOrigin:
+            - host: '*.ondemand.com'
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - ui5 build --dest ../app3
+      supported-platforms: []
+
 resources:
   - name: cf13-db
     type: com.sap.xs.hdi-container
