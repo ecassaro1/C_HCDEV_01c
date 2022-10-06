@@ -35,7 +35,7 @@ modules:
     requires:
       - name: cf13-db
 
-  - name: cf13
+  - name: cf13-approuter
     type: approuter.nodejs
     path: app/ # from cds.env.folders. Consider also cds.env.build.target -> gen/app
     parameters:
@@ -50,6 +50,24 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: cf13-auth
+
+  - name: cf13-app2
+    type: html5
+    path: app/books-list-report/
+    properties:
+      CORS:
+        - uriPattern: .
+          allowedMethods:
+            - GET
+            - POST
+          allowedOrigin:
+            - host: '*.ondemand.com'
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - ui5 build --dest ../app2
+      supported-platforms: []
 
 resources:
   - name: cf13-db
