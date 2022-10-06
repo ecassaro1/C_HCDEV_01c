@@ -1,0 +1,1 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","listreport/test/integration/FirstJourney","listreport/test/integration/pages/BooksList","listreport/test/integration/pages/BooksObjectPage"],function(t,e,r,s){"use strict";var t=new t({launchUrl:sap.ui.require.toUrl("listreport")+"/index.html"});t.run({pages:{onTheBooksList:r,onTheBooksObjectPage:s}},e.run)});

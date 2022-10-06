@@ -48,3 +48,20 @@ cf11: acessando o backend cf1 via nodejs
 
     o resultado sai no console (do express)
     funcionando local. Precisa bindar um XSUAA genérico e o destination cf11-dest (arquivo para upload)
+
+cf12: fullstack padrão golden path
+    cds init
+    cds add samples
+    cds add mta
+    cds add hana
+    cds add approuter
+    npm i
+    cds build
+    open generator (sem deploy config)
+    config manual do fiori gerado
+    config manual do approuter
+    mbt build
+    deploy
+
+cf13: fullstack golden path com dois apps e authentication
+    

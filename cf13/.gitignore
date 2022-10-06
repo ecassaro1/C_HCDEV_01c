@@ -1,4 +1,4 @@
-# CAP cf6
+# CAP cf13
 _out
 *.db
 connection.properties
@@ -28,16 +28,3 @@ mta_archives/
 # IDEs
 # .vscode
 # .idea
-
-# auto generated wildcard
-C_HCDEV_01c/cf5/be/.env
-# auto generated wildcard
-cf6/.env
-# auto generated wildcard
-cf10/.env
-# auto generated wildcard
-cf11/.env
-# auto generated wildcard
-.env
-# auto generated wildcard
-cf12/.env
