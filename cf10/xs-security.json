@@ -1,0 +1,9 @@
+{
+    "xsappname": "cf10-xsuaa",
+    "tenant-mode": "dedicated",
+    "description": "Security for cf10",
+    "scopes": [
+    ],
+    "role-templates": [
+    ]
+  }

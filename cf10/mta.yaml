@@ -33,7 +33,7 @@ resources:
 - name: cf10-xsuaa
   type: org.cloudfoundry.managed-service
   parameters:
-    path: ./fe/xs-security.json
+    path: ./xs-security.json
     service: xsuaa
     service-plan: application
     service-name: cf4feXSUAA
