@@ -13,7 +13,8 @@ modules:
     memory: 256M
   requires:
     - name: cf10-dest-1
-    - name: connectivity1
+    - name: cf10-connect
+    - name: cf10-xsuaa
 
 resources:
 - name: cf10-dest-1
@@ -23,8 +24,16 @@ resources:
     service: destination
     path: dest-config.json
 
-- name: connectivity1
+- name: cf10-connect
   type: org.cloudfoundry.managed-service
   parameters:
     service-plan: lite
     service: connectivity
+
+- name: cf10-xsuaa
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./fe/xs-security.json
+    service: xsuaa
+    service-plan: application
+    service-name: cf4feXSUAA
