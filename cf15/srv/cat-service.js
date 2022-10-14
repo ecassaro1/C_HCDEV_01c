@@ -1,17 +1,10 @@
 const cds = require('@sap/cds')
+
+const dbClient = require('./modules/db-client.js');
+
 module.exports = async function () {
+
     const { Books } = cds.entities ('my.bookshop');
-
-    this.after('READ', `Books`, (each) => {
-
-        let enh = each;
-
-        enh.title = enh.title + " mais algo";
-
-        return enh;
-    })
-
-    this.on('sum', ({ data: { x, y } }) => x + y)
 
     this.on('getBookTitle', async ({data:{ID}}) => {
         let title = "(não sei)";
@@ -21,5 +14,13 @@ module.exports = async function () {
         if (book) title = book.title;
 
         return "o título do livro de ID "+ID+" é... "+title;
+    });
+
+    this.on('getBookTitleHANA', async ({data:{ID}}) => {
+
+        let book = await dbClient.getBook(ID);
+        console.log("book="+book);
+
+        return "o título do livro de ID "+ID+" é... "+(book?book.TITLE:'não achou');
     })
 }
