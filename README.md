@@ -69,3 +69,7 @@ cf13: fullstack golden path com três apps e authentication
     (por alguma razão os apps só funcionam depois do 2o deploy)
 
     no cat-service tem umas funcionalidades extra
+
+cf14: brincando com modelagem no CAP
+
+cf15: um CAP como base pra hdb e hana-client

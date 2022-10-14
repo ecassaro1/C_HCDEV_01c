@@ -1,0 +1,14 @@
+@server = https://port4004-workspaces-ws-djm5j.us10.trial.applicationstudio.cloud.sap
+
+### ------------------------------------------------------------------------
+# Book.order
+POST http://localhost:4004/AdminService/Book(ID=1,IsActiveEntity=true)/AdminService.order
+Content-Type: application/json
+
+{
+    "qty": 3
+}
+
+### ------------------------------------------------------------------------
+# Book
+GET http://localhost:4004/AdminService/Book
