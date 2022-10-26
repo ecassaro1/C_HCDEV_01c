@@ -1,0 +1,8 @@
+{
+    "name": "cf16",
+    "scripts": {
+      "start": "npm run start"
+    },
+    "dependencies": {
+    }
+  }

@@ -1,0 +1,6 @@
+---
+applications:
+- name: cf16-react-app
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+  - cf16tocf1
