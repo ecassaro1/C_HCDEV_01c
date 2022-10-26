@@ -73,3 +73,7 @@ cf13: fullstack golden path com três apps e authentication
 cf14: brincando com modelagem no CAP
 
 cf15: um CAP como base pra hdb e hana-client
+
+cf16: um REACT acessando o cf2 por meio de destination semelhante ao cf11.
+    para criar o Destination
+        cf create-service destination lite cf16tocf1 -c dest-config.json
