@@ -12,11 +12,11 @@ cf1: Hello World nodejs
 
 cf2: Hello World HTML com AppRouter e Authentication
     para criar o XSUAA:
-        cf create-service xsuaa application cf2-xsuaa -c xs-security.json
+        cf create-service xsuaa application cf2-xsuaa -c xsuaa-config.json
 
 cf3: front igual ao do cf2 acessando o backend do cf1
     para criar o XSUAA:
-        cf create-service xsuaa application cf3-xsuaa -c xs-security.json
+        cf create-service xsuaa application cf3-xsuaa -c xsuaa-config.json
     para criar o Destination
         cf create-service destination lite cf1Destination -c dest-config.json
 

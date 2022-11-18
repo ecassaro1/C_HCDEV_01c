@@ -1,5 +1,5 @@
 annotate cf6.Ent1 with {
-	ID @title: 'Ent1'
+	ID @title: 'ID'
 }
 
 annotate cf6.Ent1 with @(
