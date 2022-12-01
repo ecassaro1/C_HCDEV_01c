@@ -1,0 +1,5 @@
+COLUMN TABLE SalesOrder (
+  ID INTEGER NOT NULL,
+  created_at DATE,
+  PRIMARY KEY(ID)
+)

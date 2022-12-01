@@ -1,0 +1,17 @@
+PROCEDURE "read_ent1"(IN id INT, OUT result ENT1 )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic
+   *************************************/
+
+    result = 
+        SELECT
+            *
+            FROM "ENT1"
+            WHERE ID = :id;
+
+END

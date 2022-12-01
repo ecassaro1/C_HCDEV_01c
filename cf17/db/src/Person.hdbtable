@@ -1,0 +1,7 @@
+COLUMN TABLE Person (
+  ID INTEGER NOT NULL,
+  name NVARCHAR(50),
+  age INTEGER,
+  genre NVARCHAR(1),
+  PRIMARY KEY(ID)
+)

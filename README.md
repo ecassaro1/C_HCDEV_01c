@@ -73,3 +73,8 @@ cf13: fullstack golden path com três apps e authentication
 cf14: brincando com modelagem no CAP
 
 cf15: um CAP como base pra hdb e hana-client
+
+cf16: um CAP para estudar CAP
+
+cf17: HANA Native
+

@@ -1,0 +1,7 @@
+COLUMN TABLE OrderItem (
+    Order_ID INTEGER not null,
+    ITEM INTEGER not null,
+    description NVARCHAR(50),
+    qty INTEGER,
+    PRIMARY KEY(Order_ID, ITEM)
+)

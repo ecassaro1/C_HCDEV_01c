@@ -1,0 +1,7 @@
+VIEW "SO_FULL"
+AS select
+ITEM.description,
+ITEM.qty
+from SALESORDER SO
+join ORDERITEM ITEM
+    on ITEM.ORDER_ID = SO.ID 
