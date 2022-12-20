@@ -6,7 +6,7 @@
             "source": "^/backend(.*)",
             "target": "$1",
             "destination": "cf4beDestination",
-            "authenticationType": "none"
+            "authenticationType": "xsuaa"
         },
         {
             "source": "^(.*)$",
