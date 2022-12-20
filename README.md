@@ -88,7 +88,28 @@ cf16: um CAP para estudar CAP
 
 cf17: HANA Native
 
+cf18: fullstack padrão golden path, igual ao cf12 mas com auth
+    cds init
+    cds add samples
+    cds add mta
+    cds add hana
+    cds add approuter
+    cds add xsuaa
+    npm i
+    cds build
+    open generator (sem deploy config)
+    config manual do fiori gerado
+    config manual do approuter
+    mbt build
+    deploy
 
+    curiosidade: no xs-app.json tive que configurar diferente do cf12:
+        cf18
+            "localDir": "./webapp/",
+        cf12
+            "localDir": "webapp/",
+
+        estava dando pau no deploy na hora de startar o cf18 (approuter)
 
 
 # Generic How-to
