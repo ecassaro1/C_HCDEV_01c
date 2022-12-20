@@ -1,8 +1,0 @@
-#
-#Mon Oct 03 18:54:41 UTC 2022
-URL=https\://cf1-srv.cfapps.us10.hana.ondemand.com
-Name=cf11-dest
-ProxyType=Internet
-Type=HTTP
-Authentication=NoAuthentication
-Description=cf11-dest

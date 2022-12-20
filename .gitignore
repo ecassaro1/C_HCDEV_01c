@@ -3,6 +3,8 @@ node_modules/*
 .node_modules/
 .cf5_mta_build_tmp/
 
+default-env.json
+
 *.mtar
 
 # Logs
