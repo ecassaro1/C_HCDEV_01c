@@ -7,7 +7,7 @@ cf1: Hello World nodejs
         no browser: http://localhost:8080/
 
     na nuvem:
-        push cf
+        cf push
         acessar a rota fornecida pelo push
 
 cf2: Hello World HTML com AppRouter e Authentication
@@ -78,3 +78,26 @@ cf16: um CAP para estudar CAP
 
 cf17: HANA Native
 
+
+
+
+# Generic How-to
+
+Debug:
+    cds watch
+    (qdo estiver rodando...) digite 'debug' no terminal (e enter). Ficará em modo de debug
+    mas ainda precisa attachar o debugger: F1 / Debug: Attach to node process. Escolha o seu (é o que termina com .../cds watch)
+
+Fullstack padrão golden path
+    cds init
+    cds add samples
+    cds add mta
+    cds add hana
+    cds add approuter
+    npm i
+    cds build
+    open generator (sem deploy config)
+    config manual do fiori gerado
+    config manual do approuter
+    mbt build
+    deploy
