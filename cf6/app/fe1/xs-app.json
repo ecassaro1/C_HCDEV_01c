@@ -6,7 +6,7 @@
             "source": "/adm(.*)",
             "target": "$1",
             "destination": "cf6apiDestination",
-            "authenticationType": "none",
+            "authenticationType": "xsuaa",
             "csrfProtection": false
         },
         {

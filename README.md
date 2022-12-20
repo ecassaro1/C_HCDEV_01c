@@ -29,6 +29,11 @@ cf5: cópia do cf4 add db module
 
 cf6: versão Nutela, usando CAP e Fiori Elements
     fe: https://ae797c74trial-dev-cf6-fe1.cfapps.us10.hana.ondemand.com/index.html
+
+    o app router fica no app/fe1;
+    o build do cf6-elem1 (no MTA) joga o resultado dentro do app/fe1, para que seja
+        roteado a partir do app router;
+    o cf6-elem1 portanto é apenas o fonte. A parte executável fica no fe1.
     
 cf7: cópia do cf3 mas acessando backend na AWS
 
