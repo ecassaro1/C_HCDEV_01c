@@ -52,7 +52,12 @@ cf11: acessando o backend cf1 via nodejs
     baseado no blog https://blogs.sap.com/2018/10/08/using-the-destination-service-in-the-cloud-foundry-environment/
 
     o resultado sai no console (do express)
-    funcionando local. Precisa bindar um XSUAA genérico e o destination cf11-dest (arquivo para upload)
+    funcionando local. Precisa bindar xsuaa cf11-auth e o destination cf11-dest
+
+    para criar o XSUAA:
+        cf create-service xsuaa application cf11-auth -c xsuaa-config.json
+    para criar o Destination
+        cf create-service destination lite cf11-dest -c dest-config.json
 
 cf12: fullstack padrão golden path
     cds init
@@ -88,10 +93,13 @@ cf17: HANA Native
 
 # Generic How-to
 
-Debug:
+Debugar o CAP:
     cds watch
     (qdo estiver rodando...) digite 'debug' no terminal (e enter). Ficará em modo de debug
     mas ainda precisa attachar o debugger: F1 / Debug: Attach to node process. Escolha o seu (é o que termina com .../cds watch)
+
+Debugar um node qualquer:
+    ...
 
 Fullstack padrão golden path
     cds init
