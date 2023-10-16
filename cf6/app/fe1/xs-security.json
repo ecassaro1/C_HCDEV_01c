@@ -1,6 +1,11 @@
 {
     "xsappname": "cf6feXSUAA",
     "tenant-mode": "dedicated",
+    "oauth2-configuration": {
+      "redirect-uris": [
+          "https://*.cfapps.us10-001.hana.ondemand.com/**"
+        ]
+      },
     "description": "Security for cf6fe",
     "scopes": [
     ],

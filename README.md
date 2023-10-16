@@ -34,6 +34,11 @@ cf6: versão Nutela, usando CAP e Fiori Elements
     o build do cf6-elem1 (no MTA) joga o resultado dentro do app/fe1, para que seja
         roteado a partir do app router;
     o cf6-elem1 portanto é apenas o fonte. A parte executável fica no fe1.
+
+    antes de deployar
+        no raiz: 
+            cds build
+            mbt build
     
 cf7: cópia do cf3 mas acessando backend na AWS
 
