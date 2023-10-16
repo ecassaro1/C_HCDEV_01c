@@ -1,6 +1,7 @@
 ---
 applications:
 - name: cf2-approuter
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  buildpacks: 
+  - nodejs_buildpack
   services:
   - cf2-xsuaa
