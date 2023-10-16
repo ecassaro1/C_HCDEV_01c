@@ -1,7 +1,8 @@
 ---
 applications:
 - name: cf3-approuter
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  buildpacks: 
+  - nodejs_buildpack
   services:
   - cf3-xsuaa
   - cf1Destination
