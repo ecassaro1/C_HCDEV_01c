@@ -64,6 +64,8 @@ cf11: acessando o backend cf1 via nodejs
     para criar o Destination
         cf create-service destination lite cf11-dest -c dest-config.json
 
+    Na nuvem não funcionou... não sei pq. Na hora de puxar do cf1 dá algum pau e p log fica pifado
+
 cf12: fullstack padrão golden path
     cds init
     cds add samples

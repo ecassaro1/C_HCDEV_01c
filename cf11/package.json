@@ -2,9 +2,10 @@
   "name": "cf11",
   "version": "1.0.0",
   "description": "",
-  "main": "dest-test.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node dest-test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
