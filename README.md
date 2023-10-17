@@ -140,3 +140,9 @@ Fullstack padrão golden path
     config manual do approuter
     mbt build
     deploy
+
+Bind para rodar local
+    puxar o serviço pra dentro do projeto a partir do 'farolzinho' de targets do cloud foundry (no BAS)
+    ajustar o arquivo:
+        -ele cria um arquivo ".env"
+        -mudar para "default-env.json" e ajustar internamente pra virar JSON

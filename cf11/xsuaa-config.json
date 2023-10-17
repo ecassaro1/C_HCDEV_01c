@@ -1,4 +1,9 @@
 {
     "xsappname": "cf11-auth",
-    "tenant-mode": "dedicated"
+    "tenant-mode": "dedicated",
+    "oauth2-configuration": {
+      "redirect-uris": [
+          "https://*.cfapps.us10-001.hana.ondemand.com/**"
+        ]
+      }
 }

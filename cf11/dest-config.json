@@ -8,7 +8,7 @@
                     "Authentication": "NoAuthentication",
                     "ProxyType": "Internet",
                     "Type": "HTTP",
-                    "URL": "https://cf1-srv.cfapps.us10.hana.ondemand.com"
+                    "URL": "https://cf1-srv.cfapps.us10-001.hana.ondemand.com"
               }
             ]
         }
