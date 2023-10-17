@@ -3,6 +3,14 @@ ID: cf6
 description: A simple CAP project.
 version: 1.0.0
 modules:
+- name: cf6-db-deployer
+  type: hdb
+  path: gen/db
+  requires:
+  - name: cf6-db
+  parameters:
+    buildpack: nodejs_buildpack
+
 - name: cf6-srv
   type: nodejs
   path: gen/srv
@@ -16,13 +24,6 @@ modules:
     buildpack: nodejs_buildpack
   build-parameters:
     builder: npm-ci
-- name: cf6-db-deployer
-  type: hdb
-  path: gen/db
-  requires:
-  - name: cf6-db
-  parameters:
-    buildpack: nodejs_buildpack
 
 - name: cf6-elem1
   type: html5

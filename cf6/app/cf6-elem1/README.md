@@ -7,7 +7,7 @@
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Floorplan Used**<br>List Report Object Page V4|
 |**Service Type**<br>OData Url|
-|**Service URL**<br>https://ae797c74trial-dev-cf6-srv.cfapps.us10.hana.ondemand.com/adm
+|**Service URL**<br>https://7601e67ftrial-dev-cf6-srv.cfapps.us10-001.hana.ondemand.com/adm
 |**Module Name**<br>cf6-elem1|
 |**Application Title**<br>Ent1 Fiori|
 |**Namespace**<br>|
