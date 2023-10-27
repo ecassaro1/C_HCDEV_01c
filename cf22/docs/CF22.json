@@ -13,8 +13,8 @@
     "paths": {
         "/approverRetrieve": {
             "post": {
-                "summary": "multiplica a entrada",
-                "description": "recebe um parâmetro e retorna multiplicado por 2",
+                "summary": "Retorna o aprovador",
+                "description": "Recebe um parâmetro e retorna multiplicado por 2",
                 "operationId": "post.approverRetrieve",
                 "requestBody": {
                     "description": "Action parameters",
@@ -38,7 +38,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "title": "A happy Hello",
+                                    "title": "Retrived attributes",
                                     "properties": {
                                         "approval": {
                                             "type": "object",
