@@ -123,6 +123,10 @@ cf19: um nodejs simples que recebe um valor na query string e retorna o seu dobr
 
 cf20: nodejs. Acessa um attributo dentro de um JSON
 
+cf21: recebe um JSON e acessa um atributo
+
+cf22: recebe um JSON dentro de uma string e retorna um JSON com os attributos buscados
+
 
 # Generic How-to
 
