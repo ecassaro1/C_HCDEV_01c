@@ -1,0 +1,15 @@
+{
+  "name": "cf19",
+  "version": "1.0.0",
+  "description": "Multiplica por 2 no CF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Eric Cassaro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

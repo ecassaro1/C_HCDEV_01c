@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "Multi",
+        "title": "multi",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://cf19-srv.cfapps.us10-001.hana.ondemand.com/"
+        }
+    ],
+    "paths": {
+        "/multi": {
+            "get": {
+                "summary": "multiplica a entrada",
+                "description": "recebe um parâmetro e retorna multiplicado por 2",
+                "operationId": "get.multi",
+                "parameters": [
+                    {
+                        "required": true,
+                        "in": "query",
+                        "name": "value",
+                        "description": "Valor a ser multiplicado por 2",
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "number",
+                                    "format": "double,null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ],
+                            "example": 3.14,
+                            "nullable": true,
+                            "default": "null"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "A happy Hello",
+                                    "properties": {
+                                        "result": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

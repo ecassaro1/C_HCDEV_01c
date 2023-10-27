@@ -118,6 +118,9 @@ cf18: fullstack padrão golden path, igual ao cf12 mas com auth
 
         estava dando pau no deploy na hora de startar o cf18 (approuter)
 
+cf19: um nodejs simples que recebe um valor na query string e retorna o seu dobro. Criei
+    pra ser usado como teste numa action do BPA.
+
 
 # Generic How-to
 
