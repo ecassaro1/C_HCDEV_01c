@@ -1,0 +1,54 @@
+### call root
+GET http://localhost:8080/
+
+### call rota1
+GET http://localhost:8080/rota1
+
+### call multi
+GET http://localhost:8080/multi?value=7
+
+
+### call mostraJSON
+POST http://localhost:8080/mostraJSON
+Content-Type: application/json
+
+{
+    "field" : "id",
+    "responseArray": [
+        {
+            "id": 1,
+            "title": "delectus aut autem",
+            "userId": 1,
+            "completed": false
+        },
+        {
+            "id": 2,
+            "title": "quis ut nam facilis et officia qui",
+            "userId": 1,
+            "completed": false
+        }
+    ]
+}     
+
+
+### call attrAccess
+POST http://localhost:8080/attrAccess
+Content-Type: application/json
+
+{
+    "field" : "id",
+    "responseArray": [
+        {
+            "id": 1,
+            "title": "delectus aut autem",
+            "userId": 1,
+            "completed": false
+        },
+        {
+            "id": 2,
+            "title": "quis ut nam facilis et officia qui",
+            "userId": 1,
+            "completed": false
+        }
+    ]
+}     

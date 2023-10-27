@@ -1,0 +1,15 @@
+{
+  "name": "cf21",
+  "version": "1.0.0",
+  "description": "Acessa o user id e a hora no log do BPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Eric Cassaro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

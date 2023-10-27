@@ -1,0 +1,176 @@
+### call root
+GET http://localhost:8080/
+
+### call retornaJSON
+POST http://localhost:8080/retornaJSON
+Content-Type: application/json
+
+{
+    "field" : "id",
+    "responseArray": [
+        {
+            "id": 1,
+            "title": "delectus aut autem",
+            "userId": 1,
+            "completed": false
+        },
+        {
+            "id": 2,
+            "title": "quis ut nam facilis et officia qui",
+            "userId": 1,
+            "completed": false
+        }
+    ]
+}     
+
+
+### call approverRetrieve
+POST http://localhost:8080/approverRetrieve
+Content-Type: application/json
+
+{
+    "result": {
+        "responseArray": [
+            {
+                "id": "635",
+                "type": "WORKFLOW_STARTED",
+                "userId": "renato.bonini@numenit.com",
+                "timestamp": "2023-10-25T19:39:09+00:00",
+                "referenceInstanceId": "2accb760-736e-11ee-b330-eeee0a898568"
+            },
+            {
+                "id": "636",
+                "type": "RULETASK_CREATED",
+                "subject": "Atribui 0",
+                "timestamp": "2023-10-25T19:39:10+00:00",
+                "activityId": "decision_atribui0_1",
+                "referenceInstanceId": "1293dd46-8574-49dd-9359-36ae8483153a"
+            },
+            {
+                "id": "637",
+                "type": "RULETASK_COMPLETED",
+                "subject": "Atribui 0",
+                "timestamp": "2023-10-25T19:39:10+00:00",
+                "activityId": "decision_atribui0_1",
+                "ruleService": {
+                    "id": "f54f150fcf886ca40bca585f62fe916c",
+                    "version": "000001000003000027"
+                },
+                "referenceInstanceId": "1293dd46-8574-49dd-9359-36ae8483153a"
+            },
+            {
+                "id": "638",
+                "type": "RULETASK_CREATED",
+                "subject": "Define Alçada",
+                "timestamp": "2023-10-25T19:39:11+00:00",
+                "activityId": "decision_hierarquiaAprovacao_1",
+                "referenceInstanceId": "17b12444-e5fa-4271-98f8-39ace6b382c3"
+            },
+            {
+                "id": "639",
+                "type": "RULETASK_COMPLETED",
+                "subject": "Define Alçada",
+                "timestamp": "2023-10-25T19:39:11+00:00",
+                "activityId": "decision_hierarquiaAprovacao_1",
+                "ruleService": {
+                    "id": "b7a6aeabc0044a8373916f132c987a90",
+                    "version": "000001000003000027"
+                },
+                "referenceInstanceId": "17b12444-e5fa-4271-98f8-39ace6b382c3"
+            },
+            {
+                "id": "640",
+                "type": "RULETASK_CREATED",
+                "subject": "Define Cargos",
+                "timestamp": "2023-10-25T19:39:11+00:00",
+                "activityId": "decision_defineAprovadores_3",
+                "referenceInstanceId": "44fb38b8-164f-46fe-991a-d5f97b590d21"
+            },
+            {
+                "id": "641",
+                "type": "RULETASK_COMPLETED",
+                "subject": "Define Cargos",
+                "timestamp": "2023-10-25T19:39:12+00:00",
+                "activityId": "decision_defineAprovadores_3",
+                "ruleService": {
+                    "id": "d1dfb70a9161a46fb05a4fae5b939564",
+                    "version": "000001000003000027"
+                },
+                "referenceInstanceId": "44fb38b8-164f-46fe-991a-d5f97b590d21"
+            },
+            {
+                "id": "642",
+                "type": "RULETASK_CREATED",
+                "subject": "Define Aprovadores",
+                "timestamp": "2023-10-25T19:39:12+00:00",
+                "activityId": "decision_decisaoAprovadores_1",
+                "referenceInstanceId": "0074f912-0748-4dd6-9fd6-e8d7fad9ff41"
+            },
+            {
+                "id": "643",
+                "type": "RULETASK_COMPLETED",
+                "subject": "Define Aprovadores",
+                "timestamp": "2023-10-25T19:39:12+00:00",
+                "activityId": "decision_decisaoAprovadores_1",
+                "ruleService": {
+                    "id": "2d44ae173c057f73522d3d89d6808f91",
+                    "version": "000001000003000027"
+                },
+                "referenceInstanceId": "0074f912-0748-4dd6-9fd6-e8d7fad9ff41"
+            },
+            {
+                "id": "644",
+                "type": "RULETASK_CREATED",
+                "subject": "Monta e-mails 1",
+                "timestamp": "2023-10-25T19:39:12+00:00",
+                "activityId": "decision_montaEmails_2",
+                "referenceInstanceId": "f35df706-2f35-4fb0-a889-ad25a37a9159"
+            },
+            {
+                "id": "645",
+                "type": "RULETASK_COMPLETED",
+                "subject": "Monta e-mails 1",
+                "timestamp": "2023-10-25T19:39:13+00:00",
+                "activityId": "decision_montaEmails_2",
+                "ruleService": {
+                    "id": "6c0b2e2eebc9d220d8e2f9d001989c38",
+                    "version": "000001000003000027"
+                },
+                "referenceInstanceId": "f35df706-2f35-4fb0-a889-ad25a37a9159"
+            },
+            {
+                "id": "646",
+                "type": "USERTASK_CREATED",
+                "taskId": "2cfbf297-736e-11ee-b330-eeee0a898568",
+                "subject": "Aprovar Pedido",
+                "timestamp": "2023-10-25T19:39:13+00:00",
+                "activityId": "form_formAprovPedido_3",
+                "initiatorId": "renato.bonini@numenit.com",
+                "recipientUsers": [
+                    "mauricio.miao@numenit.com",
+                    "rboninineto@gmail.com",
+                    "renato.bonini@numenit.com"
+                ],
+                "referenceInstanceId": "bcc6cd2e-72d4-41b4-a1bd-01546119f4b7"
+            },
+            {
+                "id": "647",
+                "type": "USERTASK_COMPLETED",
+                "taskId": "2cfbf297-736e-11ee-b330-eeee0a898568",
+                "userId": "renato.bonini@numenit.com",
+                "subject": "Aprovar Pedido",
+                "timestamp": "2023-10-25T19:40:21+00:00",
+                "activityId": "form_formAprovPedido_3",
+                "referenceInstanceId": "bcc6cd2e-72d4-41b4-a1bd-01546119f4b7"
+            },
+            {
+                "id": "648",
+                "type": "ACTIONTASK_CREATED",
+                "subject": "Retrieve process execution logs",
+                "timestamp": "2023-10-25T19:40:21+00:00",
+                "activityId": "action_get_getV1WorkflowInstancesWorkflowInstanceIdExecutionLogs_1",
+                "referenceInstanceId": "557e476c-736e-11ee-8a32-eeee0a958625"
+            }
+        ]
+    }
+}     

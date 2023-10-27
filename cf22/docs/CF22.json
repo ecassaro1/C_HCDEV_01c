@@ -1,0 +1,63 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "Acessa o user id e a hora no log do BPA, com parametros string",
+        "title": "cf22",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://cf22-srv.cfapps.us10-001.hana.ondemand.com/"
+        }
+    ],
+    "paths": {
+        "/approverRetrieve": {
+            "post": {
+                "summary": "multiplica a entrada",
+                "description": "recebe um parâmetro e retorna multiplicado por 2",
+                "operationId": "post.approverRetrieve",
+                "requestBody": {
+                    "description": "Action parameters",
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "type": "object",
+                          "properties": {
+                            "inputValue": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "A happy Hello",
+                                    "properties": {
+                                        "approval": {
+                                            "type": "object",
+                                            "properties": {
+                                                "userId": {
+                                                    "type":"string"
+                                                },
+                                                "timestamp": {
+                                                    "type":"string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

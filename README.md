@@ -121,6 +121,8 @@ cf18: fullstack padrão golden path, igual ao cf12 mas com auth
 cf19: um nodejs simples que recebe um valor na query string e retorna o seu dobro. Criei
     pra ser usado como teste numa action do BPA.
 
+cf20: nodejs. Acessa um attributo dentro de um JSON
+
 
 # Generic How-to
 

@@ -1,0 +1,5 @@
+---
+applications:
+- name: cf22-srv
+  buildpacks:
+    - nodejs_buildpack

@@ -1,0 +1,5 @@
+---
+applications:
+- name: cf20-srv
+  buildpacks:
+    - nodejs_buildpack

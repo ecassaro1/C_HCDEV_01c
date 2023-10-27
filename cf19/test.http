@@ -1,0 +1,8 @@
+### call root
+GET http://localhost:8080/
+
+### call rota1
+GET http://localhost:8080/rota1
+
+### call multi
+GET http://localhost:8080/multi?value=7
