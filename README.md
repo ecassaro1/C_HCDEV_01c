@@ -130,6 +130,12 @@ cf22: recebe um JSON dentro de uma string e retorna um JSON com os attributos bu
 cf23: um cap hello mas com authentication via router
     Funcionou!!
 
+consume_cap: um nodejs (que é o CAP3) consumingo um CAP (CAP2), via XSUAA
+    -faça o deploy do CAP2
+    -rode o CAP3 mesmo localmente, passando o seguinte path:
+        .../odata/v4/tst/getHello(to='World')
+    -ele vai buscar o JWT no XSUAA e repassa para o CAP3, que é authenticado
+
 
 # Generic How-to
 
