@@ -131,11 +131,33 @@ cf23: um cap hello mas com authentication via router
     Funcionou!!
 
 consume_cap: um nodejs (que é o CAP3) consumingo um CAP (CAP2), via XSUAA
-    -faça o deploy do CAP2
-    -rode o CAP3 mesmo localmente, passando o seguinte path:
-        .../odata/v4/tst/getHello(to='World')
-    -ele vai buscar o JWT no XSUAA e repassa para o CAP3, que é authenticado
-
+    -faça o deploy do cap2
+    -crie a role collection com a role do cap2.admin e atribua ao seu user na subaccount
+    -local
+        -copie o env variables do cap2 para o default-env.json do cap3
+        -rode o CAP3 mesmo localmente, passando o seguinte path:
+            .../odata/v4/tst/getHello(to='World')
+        -o cap3-srv vai buscar o JWT no cap2-xsuaa e repassa para o cap2, que é authenticado
+        -o próprio cap3-srv tbm é authenticado
+    -cf
+        -faça o deploy do cap3
+        -crie a role collection com a role do cap3.admin e atribua ao seu user na subaccount
+        -cf bind-service cap3-srv cap2-auth
+        -.../odata/v4/tst/getHello(to='World')
+        -o cap3-srv tbm é authenticado, então é interessante fazer esta chamada pelo approuter dele, o 'cap3'
+        
+        -o fluxo então fica assim:
+            -o client (browser? postman?) chama pelo approuter https://7601e67ftrial-dev-cap3.cfapps.us10-001.hana.ondemand.com/odata/v4/tst/getHello(to='World')
+            -o approuter chama o IDP, que é o cap3-xsuaa
+            -o cap3-xsuaa verifica se o user logado tem a role constante no xs-security.json do cap3
+            -caso positivo, este retorna para a uri que consta no redirect-uris do xs-security do cap3, que é o path dentro do cap3-srv
+            -esta foi a 1a authenticação, a do cap3, feita via approuter
+            -o cap3-srv busca nas variáveis de ambiente, via @sap/xsenv, as credenciais que estão no cap2-xsuaa
+            -faz então uma chamada na url deste xsuaa, passando clientid e clientsecret, pra recuperar o token
+            -o cap2-xsuaa verifica se o user logado tem a role constante no xs-security.json do cap2
+            -caso positivo, retorna o token
+            -com o token em mãos, o cap3-srv coloca o mesmo num header e passa pro cap2-srv
+            -o cap2-srv gera o 'hello' e retorna para o cap3-srv, que retorna para quem chamou
 
 # Generic How-to
 

@@ -8,8 +8,10 @@
   "dependencies": {
     "@sap/cds": "^7",
     "@sap/xsenv": "^4.2.0",
-    "@types/node-fetch": "^2.6.9",
-    "express": "^4"
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "node-fetch": "^2.6.7",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
@@ -17,5 +19,10 @@
   },
   "scripts": {
     "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "auth": "xsuaa"
+    }
   }
 }

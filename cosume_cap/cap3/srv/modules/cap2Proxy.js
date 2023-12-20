@@ -14,7 +14,7 @@ let service = {
 */
 
 xsenv.loadEnv();
-const services = xsenv.filterServices({ label: 'xsuaa' });
+const services = xsenv.filterServices({ name: 'cap2-auth' });
 console.log(services);
 const service = services[0];
 
@@ -45,6 +45,7 @@ async function getHello(to) {
             }
         );
 
+    //console.log("response1="+await response1.text());
     const response2 = await response1.json();
 
     result = response2;
