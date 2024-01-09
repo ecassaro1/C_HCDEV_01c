@@ -64,7 +64,7 @@ cf11: acessando o backend cf1 via nodejs
     para criar o Destination
         cf create-service destination lite cf11-dest -c dest-config.json
 
-    Na nuvem não funcionou... não sei pq. Na hora de puxar do cf1 dá algum pau e p log fica pifado
+    Na nuvem não funcionou... não sei pq. Na hora de puxar do cf1 dá algum pau e o log fica pifado
 
 cf12: fullstack padrão golden path
     cds init
@@ -158,6 +158,17 @@ consume_cap: um nodejs (que é o CAP3) consumingo um CAP (CAP2), via XSUAA
             -caso positivo, retorna o token
             -com o token em mãos, o cap3-srv coloca o mesmo num header e passa pro cap2-srv
             -o cap2-srv gera o 'hello' e retorna para o cap3-srv, que retorna para quem chamou
+
+consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao invés de token do xsuaa)
+    ... não está funfando...
+
+-cf24: exemplo do Somnath Paul: https://www.youtube.com/watch?v=0e2RFlX3dN0&list=PL54JdsBCvI0mPwzMkzlNnulw3NaxoWzks&index=5
+    CAP - HANA - Fiori Elements - E2E Application Development | VSCode | HANA HDI
+
+    -sem authentication. A autenticação é no vídeo seguinte, mas é bugada. Nos comentários do vídeo aparece uma solução.
+
+-cf25: brincadeiras com o approuter
+    
 
 # Generic How-to
 

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        async function getFromLocal() {
+            //debugger;
+
+            fetch("/odata/v4/tst/getHelloLocal(to='World')")
+            .then(async (response) => {
+                //debugger;
+
+                let resp = await response.json();
+
+                return resp;
+            })
+            .then(data => {
+                //debugger;
+                alert("the backend returns..."+data.value);
+            })
+        }
+
+        function getFromBE() {
+            debugger;
+
+            fetch("/backend/odata/v4/say/hello(to='World')")
+            .then(async (response) => {
+                let resp = "initial..."
+                debugger;
+                try {
+                    resp = await response.json();
+                } catch(err) {
+                    resp = "Falhou..."
+                }
+
+                return resp;
+            })
+            .then(data => {
+                debugger;
+                alert("the backend returns..."+data.message);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello World Frontend CAP4!!!</h1>
+    <button onclick="getFromLocal()">
+        getFromLocal
+    </button>
+    <button onclick="getFromBE()">
+        getFromBE
+    </button>
+</body>
+
+</html>

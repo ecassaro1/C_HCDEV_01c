@@ -1,0 +1,29 @@
+{
+  "welcomeFile": "app/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/app/(.*)$",
+      "target": "$1",
+      "localDir": ".",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    {
+      "source": "^/backend(.*)",
+      "target": "$1",
+      "destination": "cap2-dest",
+      "authenticationType": "BasicAuthentication"
+    },
+    {
+      "source": "^/appconfig/",
+      "localDir": ".",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "srv-api",
+      "csrfProtection": true
+    }
+  ]
+}
