@@ -168,6 +168,13 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
     -sem authentication. A autenticação é no vídeo seguinte, mas é bugada. Nos comentários do vídeo aparece uma solução.
 
 -cf25: brincadeiras com o approuter
+
+-cf26: cap / hana / approuter / xsuaa / fiori elements
+    -rodar o cap
+    -rodar o approuter
+
+    -pre-reqs:
+        -o default-env.json precisa estar com as credenciais em ambos os diretórios
     
 
 # Generic How-to

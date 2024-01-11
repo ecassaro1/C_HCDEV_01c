@@ -1,0 +1,31 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "none",
+    "routes": [
+        {
+            "source": "^/r1/(.*)$",
+            "target": "$1",
+            "localDir": "./resources/comp1"
+        },
+        {
+            "source": "^/r2/(.*)$",
+            "target": "$1",
+            "localDir": "./resources/comp2"
+        },
+        {
+            "source": "^/cf1_direct/(.*)$",
+            "target": "$1",
+            "destination": "cf1-dest-direct"
+        },
+        {
+            "source": "^/cf1_cloud/(.*)$",
+            "target": "$1",
+            "destination": "cf1-dest"
+        },
+        {
+            "source": "^/(.*)$",
+            "target": "$1",
+            "localDir": "./resources"
+        }
+    ]
+}

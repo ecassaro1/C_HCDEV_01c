@@ -1,0 +1,15 @@
+{
+    "collection": [
+        {
+            "maker": "Fender",
+            "model": "Stratocaster",
+            "year": "1993"
+        },
+        {
+            "maker": "Gibson",
+            "model": "Les Paul Studio",
+            "year": "1996"
+        }
+
+    ]
+}

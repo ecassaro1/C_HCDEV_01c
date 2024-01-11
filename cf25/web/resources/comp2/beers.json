@@ -1,0 +1,12 @@
+{
+    "catalog": [
+        {
+            "name": "La Chauffe",
+            "type": "Belgian"
+        },
+        {
+            "name": "Guinness",
+            "type": "Dry Stout"
+        }
+    ]
+}
