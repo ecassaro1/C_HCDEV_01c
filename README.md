@@ -167,14 +167,23 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
     -sem authentication. A autenticação é no vídeo seguinte, mas é bugada. Nos comentários do vídeo aparece uma solução.
 
--cf25: brincadeiras com o approuter
+-cf25: brincadeiras com o approuter:
+    -tem rotas locais
+    -tem rotas remotas, de destination:
+        -uma é via destination service
+        -outra é definida localmente no default-env.json
 
 -cf26: cap / hana / approuter / xsuaa / fiori elements
-    -rodar o cap
-    -rodar o approuter
+    -local
+        -rodar o cap
+        -rodar o approuter
 
-    -pre-reqs:
-        -o default-env.json precisa estar com as credenciais em ambos os diretórios
+        -pre-reqs:
+            -o default-env.json precisa estar com as credenciais em ambos os diretórios
+                -para isso fazer um deploy e pegar as credenciais pelo cockpit
+
+    -na nuvem:
+        -deploy do mta e acessa pelo link do cf26 (approuter)
     
 
 # Generic How-to
