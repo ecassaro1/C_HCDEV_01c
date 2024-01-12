@@ -191,7 +191,7 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
     É um cap que tem:
         -o Books do sample
         -uma função de hello
-        -uma função que busca os dados do Products da Northwind por meio do sap-cloud-sdk/odata-client
+        *-->-uma função que busca os dados do Products da Northwind por meio do sap-cloud-sdk/odata-client
     
     rodando local
 
