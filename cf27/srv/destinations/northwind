@@ -1,0 +1,8 @@
+#
+#Fri Jan 12 16:56:09 UTC 2024
+URL=https\://services.odata.org
+Name=northwind
+ProxyType=Internet
+Type=HTTP
+Authentication=NoAuthentication
+Description=Northwind

@@ -1,0 +1,7 @@
+{
+  "srv/external/Northwind.edmx": {
+    "packageName": "northwind",
+    "directoryName": "Northwind",
+    "basePath": "/V4/Northwind/Northwind.svc"
+  }
+}

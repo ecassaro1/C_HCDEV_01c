@@ -184,6 +184,31 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
     -na nuvem:
         -deploy do mta e acessa pelo link do cf26 (approuter)
+
+-cf27: sap-cloud-sdk (odata-client)
+    https://sap.github.io/cloud-sdk/docs/js/features/odata/overview
+
+    É um cap que tem:
+        -o Books do sample
+        -uma função de hello
+        -uma função que busca os dados do Products da Northwind por meio do sap-cloud-sdk/odata-client
+    
+    rodando local
+
+    precisa ter:
+        -a destination 'northwind' configurada dentro de um destination service
+            -definition na pasta srv/destinations
+        -o destination service precisa estar bindado
+            -commands:
+                >cds bind -2 <mydestination> (no caso é 'cf-dest')
+
+    a linha de comando que gerou o client:
+        (a partir do raiz)
+        npx generate-odata-client --input ./srv/external/Northwind.edmx --outputDir ./srv/external --optionsPerService --overwrite -t
+
+    pra puxar os dados:
+        https://port4004-workspaces-ws-45m2m.us10.trial.applicationstudio.cloud.sap/odata/v4/catalog/getNwProducts()
+
     
 
 # Generic How-to
