@@ -240,3 +240,4 @@ Bind para rodar local
     ajustar o arquivo:
         -ele cria um arquivo ".env"
         -mudar para "default-env.json" e ajustar internamente pra virar JSON
+        
