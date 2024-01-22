@@ -23,7 +23,8 @@
       "https://port5000-workspaces-ws-45m2m.us10.trial.applicationstudio.cloud.sap/**",
       "https://port5000-workspaces-ws-45m2m.us10.trial.applicationstudio.cloud.sap/login/callback",
       "http://localhost:5000/**",
-      "https://*.cfapps.us10-001.hana.ondemand.com/**"
+      "https://*.cfapps.us10-001.hana.ondemand.com/**",
+      "https://app.getpostman.com/oauth2/callback"
     ]
   },
   "authorities-inheritance": false
