@@ -1,0 +1,93 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+</edmx:Reference>
+<edmx:DataServices>
+<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="CatalogService">
+<EntityContainer Name="EntityContainer">
+<EntitySet Name="Books" EntityType="CatalogService.Books"/>
+</EntityContainer>
+<EntityType Name="Books">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="title" Type="Edm.String"/>
+<Property Name="stock" Type="Edm.Int32"/>
+</EntityType>
+<Annotations Target="CatalogService.Books">
+<Annotation Term="UI.LineItem">
+<Collection>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="ID"/>
+<PropertyValue Property="Value" Path="ID"/>
+</Record>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="title"/>
+<PropertyValue Property="Value" Path="title"/>
+</Record>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="stock"/>
+<PropertyValue Property="Value" Path="stock"/>
+</Record>
+</Collection>
+</Annotation>
+<Annotation Term="UI.FieldGroup" Qualifier="GeneratedGroup1">
+<Record Type="UI.FieldGroupType">
+<PropertyValue Property="Data">
+<Collection>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="ID"/>
+<PropertyValue Property="Value" Path="ID"/>
+</Record>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="title"/>
+<PropertyValue Property="Value" Path="title"/>
+</Record>
+<Record Type="UI.DataField">
+<PropertyValue Property="Label" String="stock"/>
+<PropertyValue Property="Value" Path="stock"/>
+</Record>
+</Collection>
+</PropertyValue>
+</Record>
+</Annotation>
+<Annotation Term="UI.Facets">
+<Collection>
+<Record Type="UI.ReferenceFacet">
+<PropertyValue Property="ID" String="GeneratedFacet1"/>
+<PropertyValue Property="Label" String="General Information"/>
+<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneratedGroup1"/>
+</Record>
+</Collection>
+</Annotation>
+</Annotations>
+<Annotations Target="CatalogService.EntityContainer/Books">
+<Annotation Term="Capabilities.DeleteRestrictions">
+<Record Type="Capabilities.DeleteRestrictionsType">
+<PropertyValue Property="Deletable" Bool="false"/>
+</Record>
+</Annotation>
+<Annotation Term="Capabilities.InsertRestrictions">
+<Record Type="Capabilities.InsertRestrictionsType">
+<PropertyValue Property="Insertable" Bool="false"/>
+</Record>
+</Annotation>
+<Annotation Term="Capabilities.UpdateRestrictions">
+<Record Type="Capabilities.UpdateRestrictionsType">
+<PropertyValue Property="Updatable" Bool="false"/>
+</Record>
+</Annotation>
+</Annotations>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

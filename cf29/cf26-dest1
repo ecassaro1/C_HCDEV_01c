@@ -1,0 +1,14 @@
+#clientSecret=<< Existing password/certificate removed on export >>
+#Password=<< Existing password/certificate removed on export >>
+#
+#Mon Jan 22 17:59:57 UTC 2024
+Description=Link para o cf26-srv
+Type=HTTP
+clientId=sb-cf26-3a0c729etrial-dev\!t237003
+Authentication=OAuth2Password
+Name=cf26-dest1
+tokenServiceURL=https\://3a0c729etrial.authentication.us10.hana.ondemand.com/oauth/token
+ProxyType=Internet
+URL=https\://3a0c729etrial-dev-cf26-srv.cfapps.us10-001.hana.ondemand.com/
+tokenServiceURLType=Dedicated
+User=eric.cassaro@numenit.com

@@ -1,5 +1,5 @@
 using { nw as remote } from './external/nw';
 
-service catatalog {
+service catalog {
     entity Products as projection on remote.Products;
 }

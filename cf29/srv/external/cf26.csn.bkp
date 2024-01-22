@@ -1,0 +1,90 @@
+{
+ "meta": {
+  "creator": "cds-dk 7.5.1"
+ },
+ "$version": "2.0",
+ "definitions": {
+  "cf26.Books": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "elements": {
+    "ID": {
+     "key": true,
+     "type": "cds.Integer",
+     "notNull": true
+    },
+    "title": {
+     "type": "cds.LargeString"
+    },
+    "stock": {
+     "type": "cds.Integer"
+    }
+   },
+   "@UI.LineItem": [
+    {
+     "$Type": "UI.DataField",
+     "Label": "ID",
+     "Value": {
+      "=": "ID"
+     }
+    },
+    {
+     "$Type": "UI.DataField",
+     "Label": "title",
+     "Value": {
+      "=": "title"
+     }
+    },
+    {
+     "$Type": "UI.DataField",
+     "Label": "stock",
+     "Value": {
+      "=": "stock"
+     }
+    }
+   ],
+   "@UI.FieldGroup#GeneratedGroup1": {
+    "$Type": "UI.FieldGroupType",
+    "Data": [
+     {
+      "$Type": "UI.DataField",
+      "Label": "ID",
+      "Value": {
+       "=": "ID"
+      }
+     },
+     {
+      "$Type": "UI.DataField",
+      "Label": "title",
+      "Value": {
+       "=": "title"
+      }
+     },
+     {
+      "$Type": "UI.DataField",
+      "Label": "stock",
+      "Value": {
+       "=": "stock"
+      }
+     }
+    ]
+   },
+   "@UI.Facets": [
+    {
+     "$Type": "UI.ReferenceFacet",
+     "ID": "GeneratedFacet1",
+     "Label": "General Information",
+     "Target": {}
+    }
+   ],
+   "@Capabilities.DeleteRestrictions.Deletable": false,
+   "@Capabilities.InsertRestrictions.Insertable": false,
+   "@Capabilities.UpdateRestrictions.Updatable": false
+  },
+  "cf26": {
+   "kind": "service",
+   "@cds.external": true
+  }
+ }
+}

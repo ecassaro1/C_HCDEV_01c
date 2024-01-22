@@ -217,10 +217,15 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
         cds watch --profile sandbox
 
     -a url do nw está no package.json
-    
+
 
 -cf29: CAP service integration com authentication
     -igual ao cf28, mas integrando com o cf26, que é um CAP authenticado
+
+    -precisa instanciar um destination service e subir a destination cf26-dest1
+
+    -local
+        cds watch --profile sandbox
 
 
 
