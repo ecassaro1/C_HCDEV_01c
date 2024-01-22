@@ -210,6 +210,19 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
         https://port4004-workspaces-ws-45m2m.us10.trial.applicationstudio.cloud.sap/odata/v4/catalog/getNwProducts()
 
     
+-cf28: CAP service integration
+    -integra o Northwind/products
+
+    -roda local
+        cds watch --profile sandbox
+
+    -a url do nw está no package.json
+    
+
+-cf29: CAP service integration com authentication
+    -igual ao cf28, mas integrando com o cf26, que é um CAP authenticado
+
+
 
 # Generic How-to
 
