@@ -14,15 +14,26 @@ cf2: Hello World HTML com AppRouter e Authentication
     para criar o XSUAA:
         cf create-service xsuaa application cf2-xsuaa -c xsuaa-config.json
 
+    local:
+        puxar o xsuaa pelo Cloud Foundry no menu da esquerda do Studio. Ajustar o arquivo pra default-env.json
+
+        2024: não está rodando local. Algum problema com o redirect... Tentei ajustar no xsuaa-config.json, mas não funfou
+
+    2024: no CF funfou
+
 cf3: front igual ao do cf2 acessando o backend do cf1
     para criar o XSUAA:
         cf create-service xsuaa application cf3-xsuaa -c xsuaa-config.json
     para criar o Destination
         cf create-service destination lite cf1Destination -c dest-config.json
 
+    2024: ok no cf
+
 cf4: back e front num MTA, com destination e xsuaa
     mbt build
     deploy no .MTAR
+
+    2024: ok no cf, atualizando o destination do BE (destinations.json)
 
 cf5: cópia do cf4 add db module
     fe: https://ae797c74trial-dev-cf5fe.cfapps.us10.hana.ondemand.com/index.html

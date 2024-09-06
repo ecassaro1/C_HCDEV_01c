@@ -8,7 +8,7 @@
                     "Authentication": "NoAuthentication",
                     "ProxyType": "Internet",
                     "Type": "HTTP",
-                    "URL": "https://7601e67ftrial-dev-cf4be.cfapps.us10-001.hana.ondemand.com"
+                    "URL": "https://f61c3202trial-dev-cf4be.cfapps.us10-001.hana.ondemand.com"
                 }
             ]
         }
