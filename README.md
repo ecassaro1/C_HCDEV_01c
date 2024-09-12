@@ -238,7 +238,37 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
     -local
         cds watch --profile sandbox
 
+-cf30: Local CAP Project & HTML repo
+    https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases/blob/main/topic3/README.md
 
+    Este link é do hands-on da SAP. Neste cf30 implementamos um dev semelhando ao exercício #1. A parte 
+    nova é que diferentemente dos anteriores, este app fiori é gerado sobre o CAP local. E também que o
+    App fiori fica no HTML Repo do Workzone, diferentemente dos anteriores que ficava dentro dos diretórios
+    do approuter.
+
+    - cds init cf30 --add tiny-sample
+    - cd cf30
+    - cds add hana,xsuaa --for production
+    - [f1] Fiori: Open Application Generator
+        - List Report
+        - Local CAP project
+    - cds add mta
+    - [f1] Create MTA module from template
+        - App Router Configuration
+        - Managed
+        - [Action] Do not overwrite
+        - 
+    - [na página do app (Application info)]
+        - Add Fiori Launchpad Config
+        - Add Deploy Config
+            - Destination Name: Local CAP API (instance based destination)
+    - mbt build
+    - deploy MTA to BTP
+        - garantir que o HANADB esteja rodando. E qdo criar, abrir para todos IPs.
+    - após deployado, o app estará no HTML Repo, na subaccount
+        - para poder acessar é precisa fazer uma subscription no Workzone (subscription)
+
+-cf30b: um repeteco do cf30, pra consolidar.
 
 # Generic How-to
 
@@ -263,6 +293,8 @@ Fullstack padrão golden path
     config manual do approuter
     mbt build
     deploy
+
+    (nova versão, vide CF30)
 
 Bind para rodar local
     puxar o serviço pra dentro do projeto a partir do 'farolzinho' de targets do cloud foundry (no BAS)
