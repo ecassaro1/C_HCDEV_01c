@@ -269,6 +269,7 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
         - para poder acessar é precisa fazer uma subscription no Workzone (subscription)
 
 -cf30b: um repeteco do cf30, pra consolidar.
+-cf30c: mais um, só que com o CRUD (draft-enabled habilita o CRUD)
 
 # Generic How-to
 
