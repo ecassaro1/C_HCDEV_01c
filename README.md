@@ -271,6 +271,9 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 -cf30b: um repeteco do cf30, pra consolidar.
 -cf30c: mais um, só que com o CRUD (draft-enabled habilita o CRUD)
 
+-cf31: CAP básico com UI annotations, association, search-help, srv.js validation
+
+
 # Generic How-to
 
 Debugar o CAP:
