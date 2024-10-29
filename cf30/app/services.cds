@@ -1,2 +1,2 @@
 
-using from './books/annotations';
+using from './cf30app/annotations';

@@ -14,15 +14,26 @@ cf2: Hello World HTML com AppRouter e Authentication
     para criar o XSUAA:
         cf create-service xsuaa application cf2-xsuaa -c xsuaa-config.json
 
+    local:
+        puxar o xsuaa pelo Cloud Foundry no menu da esquerda do Studio. Ajustar o arquivo pra default-env.json
+
+        2024: não está rodando local. Algum problema com o redirect... Tentei ajustar no xsuaa-config.json, mas não funfou
+
+    2024: no CF funfou
+
 cf3: front igual ao do cf2 acessando o backend do cf1
     para criar o XSUAA:
         cf create-service xsuaa application cf3-xsuaa -c xsuaa-config.json
     para criar o Destination
         cf create-service destination lite cf1Destination -c dest-config.json
 
+    2024: ok no cf
+
 cf4: back e front num MTA, com destination e xsuaa
     mbt build
     deploy no .MTAR
+
+    2024: ok no cf, atualizando o destination do BE (destinations.json)
 
 cf5: cópia do cf4 add db module
     fe: https://ae797c74trial-dev-cf5fe.cfapps.us10.hana.ondemand.com/index.html
@@ -227,7 +238,38 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
     -local
         cds watch --profile sandbox
 
+-cf30: Local CAP Project & HTML repo
+    https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases/blob/main/topic3/README.md
 
+    Este link é do hands-on da SAP. Neste cf30 implementamos um dev semelhando ao exercício #1. A parte 
+    nova é que diferentemente dos anteriores, este app fiori é gerado sobre o CAP local. E também que o
+    App fiori fica no HTML Repo do Workzone, diferentemente dos anteriores que ficava dentro dos diretórios
+    do approuter.
+
+    - cds init cf30 --add tiny-sample
+    - cd cf30
+    - cds add hana,xsuaa --for production
+    - [f1] Fiori: Open Application Generator
+        - List Report
+        - Local CAP project
+    - cds add mta
+    - [f1] Create MTA module from template
+        - App Router Configuration
+        - Managed
+        - [Action] Do not overwrite
+        - 
+    - [na página do app (Application info)]
+        - Add Fiori Launchpad Config
+        - Add Deploy Config
+            - Destination Name: Local CAP API (instance based destination)
+    - mbt build
+    - deploy MTA to BTP
+        - garantir que o HANADB esteja rodando. E qdo criar, abrir para todos IPs.
+    - após deployado, o app estará no HTML Repo, na subaccount
+        - para poder acessar é precisa fazer uma subscription no Workzone (subscription)
+
+-cf30b: um repeteco do cf30, pra consolidar.
+-cf30c: mais um, só que com o CRUD (draft-enabled habilita o CRUD)
 
 # Generic How-to
 
@@ -252,6 +294,8 @@ Fullstack padrão golden path
     config manual do approuter
     mbt build
     deploy
+
+    (nova versão, vide CF30)
 
 Bind para rodar local
     puxar o serviço pra dentro do projeto a partir do 'farolzinho' de targets do cloud foundry (no BAS)
