@@ -273,6 +273,8 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
 -cf31: CAP básico com UI annotations, association, search-help, srv.js validation
 
+-cf32: AnalyticTable
+
 
 # Generic How-to
 
