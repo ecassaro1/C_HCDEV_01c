@@ -275,6 +275,9 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
 -cf32: AnalyticTable
 
+-cf33: CAP com service.js
+
+
 
 # Generic How-to
 
