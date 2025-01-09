@@ -4,5 +4,5 @@ service CatalogService {
     @readonly entity Books as projection on my.Books;
     @readonly entity Authors as projection on my.Authors;
     @readonly entity Gifts as projection on my.Gifts;
-    @readonly entity AuthorsEnhanced as projection on my.AuthorsEnhanced;
+    @readonly entity BooksFromCharlotte as projection on my.BooksFromCharlotte;
 }

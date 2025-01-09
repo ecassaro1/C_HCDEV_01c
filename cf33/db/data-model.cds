@@ -10,6 +10,7 @@ entity Books {
 entity Authors {
   key ID : Integer;
   name   : String;
+  qtyBooks: Integer;
   books  : association to many Books on books.author = $self;
 }
 
@@ -19,8 +20,7 @@ entity Gifts {
     stock : Integer;
 }
 
-entity AuthorsEnhanced {
-  key ID : Integer;
-  name   : String;
-  qtBooks : Integer
+entity BooksFromCharlotte {
+    key ID : Integer;
+    title : String;
 }
