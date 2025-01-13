@@ -277,6 +277,9 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
 -cf33: CAP com service.js
 
+-cf34: CAP com Swagger/OpenAPI
+    https://cap.cloud.sap/docs/advanced/publishing-apis/openapi
+
 
 
 # Generic How-to
