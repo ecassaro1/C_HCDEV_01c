@@ -222,6 +222,8 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
     
 -cf28: CAP service integration
+    https://cap.cloud.sap/docs/guides/using-services#external-service-api
+
     -integra o Northwind/products
 
     -roda local
@@ -280,7 +282,26 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 -cf34: CAP com Swagger/OpenAPI
     https://cap.cloud.sap/docs/advanced/publishing-apis/openapi
 
+-cf35: comunicação entre dois CAPs
+    cf35a é o provider
+    cf35b é o consumer, via fetch
+    cf35c é outro consumer, mas via external service API
+        https://cap.cloud.sap/docs/guides/using-services#external-service-api
 
+        este repo consome o cf35a, via external API import
+
+        as partes interessantes estão nos seguintes files:
+            package.json
+                cds/requires
+            service.js
+            service.cds
+
+        no cf35a
+            cds compile srv -s CatalogService -2 edmx -o srv\external
+
+        no cf35c
+            cds import ..\cf35a\srv\external\CatalogService.xml --as cds        
+        
 
 # Generic How-to
 
