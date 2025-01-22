@@ -282,9 +282,10 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 -cf34: CAP com Swagger/OpenAPI
     https://cap.cloud.sap/docs/advanced/publishing-apis/openapi
 
--cf35: comunicação entre dois CAPs
+-cf35: comunicação entre CAPs
     cf35a é o provider
     cf35b é o consumer, via fetch
+        configurar o host:porta do cf35a no .env
     cf35c é outro consumer, mas via external service API
         https://cap.cloud.sap/docs/guides/using-services#external-service-api
 
@@ -302,6 +303,13 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
         no cf35c
             cds import ..\cf35a\srv\external\CatalogService.xml --as cds        
         
+-cf36: CAP com typescript
+    https://cap.cloud.sap/docs/node.js/typescript
+
+
+-cf37: fullstack TS
+    
+
 
 # Generic How-to
 
