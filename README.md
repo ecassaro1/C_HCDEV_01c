@@ -307,7 +307,8 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
     https://cap.cloud.sap/docs/node.js/typescript
 
 
--cf37: fullstack TS
+-cf37: CAP com TS e OO
+    
     
 
 
