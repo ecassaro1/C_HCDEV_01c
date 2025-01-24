@@ -1,0 +1,9 @@
+#
+#Fri Jan 24 18:04:34 UTC 2025
+tokenServiceURLType=Dedicated
+Type=HTTP
+Description=CF38A - Servico Base
+Authentication=NoAuthentication
+ProxyType=Internet
+URL=https\://de088889trial-dev-cf38a-srv.cfapps.us10-001.hana.ondemand.com
+Name=cf38a-dest

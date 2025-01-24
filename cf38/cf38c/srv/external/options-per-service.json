@@ -1,0 +1,7 @@
+{
+  "srv/external/cf38a.edmx": {
+    "packageName": "cf38a",
+    "directoryName": "cf38a",
+    "basePath": "/odata/v4/catalog"
+  }
+}

@@ -308,6 +308,54 @@ consume_cap: acessando o cap2 do anterior, mas desta vez via destination (ao inv
 
 
 -cf37: CAP com TS e OO
+
+-cf38: todas as formas de conexão (sem authenticação)
+    -cf38a: tiny-sample (base)
+        pra ser sem authenticação precisa estar assim no package.json:
+            "cds": {
+                "sql": {
+                    "native_hana_associations": false
+                },
+                "requires": {
+                    "auth": {
+                        "restrict_all_services": false,
+                        "kind": "xsuaa"
+                    }
+                }
+            }        
+
+    -cf38b: 
+    
+    -cf38c: destination/cloud-sdk
+        https://sap.github.io/cloud-sdk/docs/js/overview
+
+        está em TS (cds add typescript)
+            o problema é que os 'npm i' depois ficam dando pau... tem algum conflito
+                pra resolver é 'npm i --force
+
+        pra funcionar:
+            npm i @sap-cloud-sdk/generator (já está instalado aqui)
+            no srv/external
+                trazer o edmx do cf38a
+                criar o options-per-service.json
+            pra gerar o client
+                npx generate-odata-client --input ./srv/external --outputDir ./srv/external --optionsPerService ./srv/external options-per-service.json --overwrite
+            pra rodar
+                no BTP CF o srv38-srv precisa estar rodando
+                criar uma destination (service)
+                cf create-service destination lite cf38a-dest -c ./destinations/CF38A.json (talvez tenha que criar na mão)
+                cf bind -2 cf38a-dest
+                criar no package.json este script
+                    "h-watch": "cds-tsx w --profile hybrid"
+                rodar com
+                    npm run h-watch
+                no client:
+                    http://localhost:4004/odata/v4/books-consumer/getCF38aBooks()
+
+
+    -hana-client
+    -external service API
+    -fetch
     
     
 
