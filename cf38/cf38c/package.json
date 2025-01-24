@@ -23,5 +23,13 @@
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
+  },
+  "cds": {
+    "requires": {
+      "cf38a": {
+        "kind": "odata",
+        "model": "srv/external/cf38a"
+      }
+    }
   }
 }
